@@ -9,9 +9,10 @@
         <vl-source-osm></vl-source-osm>
       </vl-layer-tile>
     </vl-map>
-    <div id="qr" v-if="show">
+    <div id="qr">
       <qr-code v-if="show" :cords="cords"/>
       <p v-if="show">{{ cords }}</p>
+      <p v-if="!show">Kliknij lokalizację na mapie...</p>
     </div>
   </div>
 </template>
@@ -32,7 +33,7 @@ import QRCode from './components/QRCode.vue';
     },
     methods: {
       getLoction(e) {
-        this.cords = `(${e.coordinate[0]}, ${e.coordinate[1]})`;
+        this.cords = `(${e.coordinate[1]}, ${e.coordinate[0]})`;
         console.log(this.cords);
         this.show = true;
       }
