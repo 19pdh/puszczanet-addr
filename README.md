@@ -1,5 +1,7 @@
 # puszczanet-addr
 
+Generator adresów
+
 ## Project setup
 ```
 npm install
