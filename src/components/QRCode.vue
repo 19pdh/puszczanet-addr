@@ -20,8 +20,17 @@ export default {
   },
   methods: {
     generate() {
-      QRCode.toCanvas(this.$refs['canvas'], this.cords)
+      QRCode.toCanvas(this.$refs['canvas'], this.cords, {
+        scale: 8
+      })
     }
   }
 }
 </script>
+
+<style scoped>
+canvas {
+  height: 35vh!important;
+  width: 35vh!important;
+}
+</style>

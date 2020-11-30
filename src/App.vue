@@ -11,7 +11,7 @@
     </vl-map>
     <div id="qr">
       <qr-code v-if="show" :cords="cords"/>
-      <p v-if="show">{{ cords }}</p>
+      <input type="text" v-model="cords" v-if="show">
       <p v-if="!show">Kliknij lokalizację na mapie...</p>
     </div>
   </div>
@@ -58,5 +58,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+input {
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+  margin: 1px;
+  border: none;
 }
 </style>
